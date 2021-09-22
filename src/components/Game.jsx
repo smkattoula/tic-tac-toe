@@ -54,13 +54,12 @@ const Game = () => {
   };
 
   const isBoardFull = (squares) => {
-    squares.map((square) => {
-      if (square == null) {
+    for (let i = 0; i < squares.length; i++) {
+      if (squares[i] == null) {
         return false;
-      } else {
-        return true;
       }
-    });
+    }
+    return true;
   };
 
   const getStatus = () => {
